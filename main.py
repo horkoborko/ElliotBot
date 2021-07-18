@@ -1,6 +1,7 @@
 import discord
 import os
 import random
+from keep_alive import keep_alive
 
 def get_image():
   picture = random.randint(1, 8)
@@ -22,4 +23,5 @@ async def on_message(message):
     jpg = 'elliot/' + str(get_image()) + '.JPG'
     await message.channel.send(file=discord.File(jpg))
 
+keep_alive()
 client.run(os.environ['TOKEN'])
