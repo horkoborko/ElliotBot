@@ -4,7 +4,7 @@ import random
 from keep_alive import keep_alive
 
 def get_image():
-  picture = random.randint(1, 8)
+  picture = random.randint(1, 13)
   return picture
 
 client = discord.Client()
